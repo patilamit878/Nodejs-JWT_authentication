@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "crypto": "^1.0.1",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1",
+    "nodemon": "^2.0.15"
+  },
+  "name": "nodejs-jwt_authentication",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patilamit878/Nodejs-JWT_authentication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patilamit878/Nodejs-JWT_authentication/issues"
+  },
+  "homepage": "https://github.com/patilamit878/Nodejs-JWT_authentication#readme",
+  "description": ""
+}
