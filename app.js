@@ -8,6 +8,9 @@ var jsonParser = bodyParser.json();
 // var key = "password";
 // var algo = "aes256";
 
+const jwt = require('jsonwebtoken');
+jwtKey = "jwt"
+
 mongoose.connect('mongodb://localhost:27017/JWTauth', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -26,7 +29,10 @@ app.post('/register', jsonParser, function (req, res) {
         password:req.body.password,
     })
     data.save().then((result)=>{
-        res.json(result)
+        jwt.sign({result},jwtKey,{expiresIn:'300s'},(err,token) =>{
+            res.status(201).json({token})
+        })
+        // res.status(201).json(result)
     }).catch((err) =>{
         console.warn(err);
     })
